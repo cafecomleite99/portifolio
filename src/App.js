@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./Components/Card";
+
+import cardsJSON from './card.json'
+import { useState } from "react";
+import NavgationBar from "./Components/NavgationBar";
 
 function App() {
+
+  const [cards, setcards] = useState(cardsJSON);
+  const [cardsFilter, setcardsFilter] = useState(cards);
+
+  function showCards (input) {
+    let aux = [...cards]
+    let res = aux.filter( (e) => e.title.slice(0, input.length) === input )
+
+    setcardsFilter(res)
+
+    console.log(input.length + " " + input)
+    console.log(res)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <NavgationBar onClick={showCards}/>
+
+
+      {cardsFilter.map( (value, index) => {
+        return <Card key={value.id} data={value}/>
+      } )}
     </div>
   );
 }
