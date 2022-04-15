@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+import html from '../../Assets/icons/logo-html5.svg'
+import css from '../../Assets/icons/logo-css3.svg'
+import js from '../../Assets/icons/logo-javascript.svg'
+import react from '../../Assets/icons/logo-react.svg'
+
 export const CardWrapper = styled.div`
     position: relative;
     background-color: white;
@@ -35,6 +40,7 @@ export const CardWrapper = styled.div`
     }
 
     & > .image > .icons > .languageIcon {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -45,6 +51,102 @@ export const CardWrapper = styled.div`
         border-radius: 50px;
         border: solid 1px #B7BBC650;
         cursor: pointer;
+    }
+
+    & > .image > .icons > .HTML {
+        background: url(${html}) no-repeat;
+        background-color: white;
+        background-size: 22px;
+        background-position: 50%;
+
+        &:hover {            
+            &::before{
+                content: 'HTML';
+                position: absolute;
+                top: -38px;
+                height: 16px;
+                padding: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 9pt;
+                border-radius: 4px;
+                background-color: white;
+            }
+        }
+
+    }
+
+    & > .image > .icons > .CSS {
+        background: url(${css}) no-repeat;
+        background-color: white;
+        background-size: 22px;
+        background-position: 50%;
+
+        &:hover {            
+            &::before{
+                content: 'CSS';
+                position: absolute;
+                top: -38px;
+                height: 16px;
+                padding: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 9pt;
+                border-radius: 4px;
+                background-color: white;
+            }
+        }
+
+    }
+
+    & > .image > .icons > .JavaScript {
+        background: url(${js}) no-repeat;
+        background-color: white;
+        background-size: 22px;
+        background-position: 50%;
+
+        &:hover {            
+            &::before{
+                content: 'JavaScript';
+                position: absolute;
+                top: -38px;
+                height: 16px;
+                padding: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 9pt;
+                border-radius: 4px;
+                background-color: white;
+            }
+        }
+
+    }
+
+    & > .image > .icons > .React {
+        background: url(${react}) no-repeat;
+        background-color: white;
+        background-size: 22px;
+        background-position: 50%;
+
+        &:hover {            
+            &::before{
+                content: 'React';
+                position: absolute;
+                top: -38px;
+                height: 16px;
+                padding: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 9pt;
+                border-radius: 4px;
+                background-color: white;
+            }
+        }
+
     }
 
     & > .title {

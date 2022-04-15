@@ -12,15 +12,20 @@ export default createGlobalStyle`
     }
 
     .App {
-        display: flex;
+        width: 100%;
         max-width: 1440px;
         margin: 0 auto;
-
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 16px;
         padding: 32px;
+
+        
+        & .cardContainer{
+            width: 100%;
+            display: flex;
+            flex: none;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+        }
     }
 
 `

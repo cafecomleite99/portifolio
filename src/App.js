@@ -3,6 +3,8 @@ import Card from "./Components/Card";
 import cardsJSON from './card.json'
 import { useState } from "react";
 import NavgationBar from "./Components/NavgationBar";
+import SearchBar from "./Components/SearchBar";
+import Profile from "./Components/Profile/Index";
 
 function App() {
 
@@ -21,13 +23,15 @@ function App() {
 
   return (
     <div className="App">
+      <Profile />
 
-      <NavgationBar onClick={showCards}/>
+      <div className="cardContainer">
+        {cardsFilter.map( (value, index) => {
+          return <Card key={value.id} data={value}/>
+        } )}
+      </div>
 
 
-      {cardsFilter.map( (value, index) => {
-        return <Card key={value.id} data={value}/>
-      } )}
     </div>
   );
 }
