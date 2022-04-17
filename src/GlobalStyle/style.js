@@ -19,12 +19,9 @@ export default createGlobalStyle`
 
         
         & .cardContainer{
-            width: 100%;
-            display: flex;
-            flex: none;
-            flex-wrap: wrap;
-            gap: 16px;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(232px, 1fr));
+            gap: 16px 32px;
         }
     }
 

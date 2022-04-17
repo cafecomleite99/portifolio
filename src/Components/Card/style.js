@@ -14,7 +14,6 @@ export const CardWrapper = styled.div`
     align-items: flex-start;
     padding: 16px;
     margin-bottom: 32px;
-    width: 362px;
     min-width: 232px;
 
     box-shadow: 0px 0px 20px rgba(151, 164, 190, 0.1);
