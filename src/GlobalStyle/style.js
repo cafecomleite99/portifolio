@@ -15,13 +15,13 @@ export default createGlobalStyle`
         width: 100%;
         max-width: 1440px;
         margin: 0 auto;
-        padding: 32px;
 
         
         & .cardContainer{
             display: grid;
-            grid-template-columns: repeat(3, minmax(232px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
             gap: 16px 32px;
+            padding: 32px;
         }
     }
 

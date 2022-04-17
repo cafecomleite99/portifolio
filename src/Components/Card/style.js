@@ -4,6 +4,7 @@ import html from '../../Assets/icons/logo-html5.svg'
 import css from '../../Assets/icons/logo-css3.svg'
 import js from '../../Assets/icons/logo-javascript.svg'
 import react from '../../Assets/icons/logo-react.svg'
+import style from '../../Assets/icons/styled-logo.png'
 
 export const CardWrapper = styled.div`
     position: relative;
@@ -133,6 +134,30 @@ export const CardWrapper = styled.div`
         &:hover {            
             &::before{
                 content: 'React';
+                position: absolute;
+                top: -38px;
+                height: 16px;
+                padding: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 9pt;
+                border-radius: 4px;
+                background-color: white;
+            }
+        }
+
+    }
+
+    & > .image > .icons > .Styled {
+        background: url(${style}) no-repeat;
+        background-color: white;
+        background-size: 22px;
+        background-position: 50%;
+
+        &:hover {            
+            &::before{
+                content: 'Styled Components';
                 position: absolute;
                 top: -38px;
                 height: 16px;
