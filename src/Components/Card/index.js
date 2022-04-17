@@ -1,4 +1,4 @@
-import PlayButton from '../PlayButton';
+import CircleButton from '../CircleButton';
 import { CardWrapper } from './style'
 
 const Card = ({ data }) => {
@@ -7,7 +7,7 @@ const Card = ({ data }) => {
             <div className="image">
                 <section className='icons'>
                     {data.languages.map( (e) => {
-                        return <div id={e} className={`languageIcon ${e}`}></div>
+                        return <div id={e} key={e} className={`languageIcon ${e}`}></div>
                     } )}
                 </section>
             </div>
@@ -18,8 +18,11 @@ const Card = ({ data }) => {
             <div className="separator"></div>
 
             <p className="designBy">Design By: <span className="designer">{data.design}</span></p>
-
-            <PlayButton link={data.link}/>
+            
+            <section className="buttons">
+                <CircleButton link={data.repo} icon={'git'}/>
+                <CircleButton link={data.link} icon={'play'}/>
+            </section>
         </CardWrapper>
      );
 }

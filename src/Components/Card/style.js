@@ -30,7 +30,6 @@ export const CardWrapper = styled.div`
         background: url(${props => props.img}) no-repeat;
         background-size: cover;
         background-position: center;
-        background-color: aqua;
         border-radius: 8px;
     }
 
@@ -204,6 +203,14 @@ export const CardWrapper = styled.div`
     & > .designBy > .designer {
         font-size: 10pt;
         font-weight: 500;
+    }
+
+    & > .buttons{
+        display: flex;
+        gap: 16px;
+        position: absolute;
+        right: 18px;
+        bottom: -24px;
     }
         
 `
